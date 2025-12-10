@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>My Tasks</h1>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="taskTitle" placeholder="Task Title (e.g., Buy Groceries)" required>
+            <textarea id="taskDesc" placeholder="Description (Optional)"></textarea>
+            
+            <div class="row">
+                <select id="taskPriority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+                <input type="date" id="taskDate">
+            </div>
+
+            <button id="addBtn" onclick="addOrUpdateTask()">Add Task</button>
+            <input type="hidden" id="editIndex" value="-1"> </div>
+
+        <ul id="taskList">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

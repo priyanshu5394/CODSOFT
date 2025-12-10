@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.app-container {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 380px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: white;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn.active {
+    color: #764ba2;
+    border-bottom: 3px solid #764ba2;
+}
+
+.screen {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.quote-card {
+    background: linear-gradient(to bottom right, #ffffff, #f3f3f3);
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 40px;
+    width: 100%;
+}
+
+.quote-icon {
+    font-size: 30px;
+    color: #764ba2;
+    margin-bottom: 15px;
+}
+
+#quoteText {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+#quoteAuthor {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.action-btn {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.2s;
+}
+
+.action-btn:hover {
+    background: #f0f0f0;
+}
+
+.action-btn.like.liked {
+    color: #e74c3c;
+    border-color: #e74c3c;
+    background: #fff0f0;
+}
+
+.new-quote-btn {
+    margin-top: 30px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
+}
+
+.new-quote-btn:hover {
+    background: #5b3a7d;
+}
+
+#favList {
+    list-style: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.fav-item {
+    background: white;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.fav-author {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+    display: block;
+}
+
+.delete-fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff6b6b;
+    cursor: pointer;
+}
+
+#emptyMsg {
+    color: #aaa;
+    margin-top: 50px;
+}

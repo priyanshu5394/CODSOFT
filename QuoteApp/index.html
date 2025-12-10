@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspiration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header>
+            <button id="homeBtn" class="nav-btn active" onclick="showHome()">Home</button>
+            <button id="favBtn" class="nav-btn" onclick="showFavorites()">Favorites</button>
+        </header>
+
+        <div id="homeScreen" class="screen">
+            <div class="quote-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p id="quoteText">Loading inspiration...</p>
+                <p id="quoteAuthor">- Author Name</p>
+                
+                <div class="action-buttons">
+                    <button class="action-btn share" onclick="shareQuote()">
+                        <i class="fas fa-share-alt"></i> Share
+                    </button>
+                    <button class="action-btn like" id="likeBtn" onclick="toggleFavorite()">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="new-quote-btn" onclick="getNewQuote()">
+                <i class="fas fa-sync-alt"></i> New Quote
+            </button>
+        </div>
+
+        <div id="favScreen" class="screen hidden">
+            <h3>Your Collections</h3>
+            <ul id="favList">
+                </ul>
+            <div id="emptyMsg">No favorites yet!</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
